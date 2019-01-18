@@ -65,8 +65,8 @@ function errorHandler(evt)
 function getTheAnswer()
 {
 try {
-	//var ques = document.getElementsByClassName("question");
-	var textInQues = document.getElementsByTagName("p")[0];
+	var ques = document.getElementsByClassName("question");
+	var textInQues = (ques[0].getElementsByTagName("p"))[0];
 	var isFound = fileContents.search(textInQues.innerHTML.substring(0,26));
 	if(isFound == -1)
 	{
